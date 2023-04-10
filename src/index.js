@@ -230,6 +230,9 @@ function getServer({ port }, callback, options) {
 }
 
 const createServer = async (options, serverOptions) => {
+  if (!options || !options.port) {
+    throw new Error('Port should be specified to create gRPC server.');
+  }
   return new Promise((resolve, reject) => {
     const callback = (err, server) => {
       if (err) {
@@ -241,13 +244,5 @@ const createServer = async (options, serverOptions) => {
     getServer(options, callback, serverOptions);
   });
 };
-
-if (require.main === module) {
-  var parseArgs = require('minimist');
-  var argv = parseArgs(process.argv, { string: ['port'] });
-  createServer(argv).then((server) => {
-    server.start();
-  });
-}
 
 module.exports = createServer;
