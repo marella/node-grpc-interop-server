@@ -1,0 +1,33 @@
+{
+  "name": "grpc-interop-server",
+  "version": "0.0.0",
+  "description": "An implementation of gRPC interop server for Node.js",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "files": [
+    "src/**/*.{js,proto}"
+  ],
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.13",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.8"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marella/node-grpc-interop-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marella/node-grpc-interop-server/issues"
+  },
+  "homepage": "https://github.com/marella/node-grpc-interop-server",
+  "keywords": [
+    "grpc",
+    "interop",
+    "server",
+    "test"
+  ]
+}
