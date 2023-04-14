@@ -19,20 +19,19 @@ npx grpc-interop-server --port 8080
 or use in a CommonJS module:
 
 ```js
-const createServer = require('grpc-interop-server');
+const startServer = require('grpc-interop-server');
 
-createServer({ port: 8080 }).then((server) => {
-  server.start();
+startServer({ port: 8080 }).then((server) => {
+  //
 });
 ```
 
 or use in an ECMAScript module:
 
 ```js
-import createServer from 'grpc-interop-server';
+import startServer from 'grpc-interop-server';
 
-const server = await createServer({ port: 8080 });
-server.start();
+const server = await startServer({ port: 8080 });
 ```
 
 ## License

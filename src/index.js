@@ -243,4 +243,10 @@ const createServer = async (options, serverOptions) => {
   });
 };
 
-module.exports = createServer;
+const startServer = async (...args) => {
+  const server = await createServer(...args);
+  server.start();
+  return server;
+};
+
+module.exports = startServer;
